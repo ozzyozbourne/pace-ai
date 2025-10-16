@@ -1,7 +1,7 @@
 ---
-.title = "Devlog - 1989",
+.title = "FFPROBE",
 .date = @date("1989-01-01T00:00:00"),
-.author = "Sample Author",
+.author = "Osaid Khan",
 .layout = "devlog.shtml",
 .draft = false,
 --- 
@@ -14,5 +14,5 @@ You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('
 This page lists entries for the year 1989, for past or future entries consult the
 [devlog archive](/devlog/).
 
-## [Hello 1989]($section.id("1989-01-01T00:00:00"))
+## [ffprobe command line notes]($section.id("1989-01-01T00:00:00"))
 This is a sample entry.

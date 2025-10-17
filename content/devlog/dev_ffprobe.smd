@@ -1,0 +1,53 @@
+---
+.title = "ffprobe",
+.date = @date("2025-10-17T00:00:00"),
+.author = "Osaid Khan",
+.layout = "devlog.shtml",
+.draft = false,
+--- 
+
+[]($section.id('about'))
+## Cli utility devlogs
+
+You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
+
+For previous devlogs refer [devlog archive](/devlog/).
+
+## [Getting the flags right]($section.id("2025-10-17T00:00:00"))
+
+-v -> Verbose logging flag, and we can enable for level we what verbose logging
+
+type error -> -v error (verbose for error level )
+
+we have multi channels in 6 to exact, and they can further sub channels, 
+
+- vedio                 ->   (v:)
+- audio                 ->   (a:)
+- subtitles             ->   (s:)   
+- data streams          ->   (a:)   
+- attachments           ->   (t:)   
+- Vedio thumb nails     ->   (V:)   
+
+***order of where we put the flags dont matter in ffprobe***
+
+```bash
+
+ffprobe -v error -select_streams v:0 -show_entries stream=width <file name>
+
+ffprobe -select_streams v:0 -v error -show_entries stream=width <file name>
+
+ffprobe <file name> -v error -select_streams v:0 -show_entries stream=width
+
+```
+command to use 
+```bash
+ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of default=noprint_wrappers=1 111.jpg
+
+```
+
+
+-show_entries which values do we want to see 
+-of output formatting
+
+
+

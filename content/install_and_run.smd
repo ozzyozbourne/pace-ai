@@ -1,15 +1,13 @@
 ---
-.title = "Homepage",
+.title = "Install & Run",
 .date = @date("1990-01-01T00:00:00"),
-.author = "Sample Author",
+.author = "Osaid Khan",
 .layout = "index.shtml",
 .draft = false,
 --- 
 
-## Style GAN
-
-## Stable diffusion
-
+## Installation 
+## Run
 
 
 

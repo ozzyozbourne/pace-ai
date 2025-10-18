@@ -55,6 +55,3 @@ current command to crop all the image into the desired type for style gan
 parallel --bar -j $(nproc) 'ffmpeg -loglevel error -i {} -vf "crop=420:420:0:80" -y cropped/{}' ::: *.jpg
 
 ```
-
-
-

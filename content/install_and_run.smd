@@ -1,12 +1,19 @@
 ---
 .title = "Install & Run",
-.date = @date("1990-01-01T00:00:00"),
+.date = @date("2025-10-17T00:00:00"),
 .author = "Osaid Khan",
 .layout = "index.shtml",
 .draft = false,
 --- 
 
 ## Installation 
+
+Requirements
+
+- ffmpeg
+- ffprobe
+- gnu parallel
+
 ## Run
 
 

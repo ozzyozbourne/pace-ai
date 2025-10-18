@@ -1,6 +1,6 @@
 ---
-.title = "Devlog - 1989",
-.date = @date("1989-01-01T00:00:00"),
+.title = "FFmpeg",
+.date = @date("2025-10-18T00:00:00"),
 .author = "Osaid Khan",
 .layout = "devlog.shtml",
 .draft = false,
@@ -12,5 +12,4 @@ You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('
 
 For previous devlogs refer [devlog archive](/devlog/).
 
-## [Hello 1989]($section.id("1989-01-01T00:00:00"))
-This is a sample entry.
+## [Understanding FFMPEG]($section.id("2025-10-18T00:00:00"))

@@ -21,12 +21,14 @@ type error -> -v error (verbose for error level )
 
 we have multi channels in 6 to exact, and they can further sub channels, 
 
-- vedio                 ->   (v:)
-- audio                 ->   (a:)
-- subtitles             ->   (s:)   
-- data streams          ->   (a:)   
-- attachments           ->   (t:)   
-- Vedio thumb nails     ->   (V:)   
+| Stream Type        | Code |
+|:-------------------|:-----|
+| video              | (v:) |
+| audio              | (a:) |
+| subtitles          | (s:) |
+| data streams       | (d:) |
+| attachments        | (t:) |
+| video thumbnails   | (V:) |
 
 ***order of where we put the flags dont matter in ffprobe***
 
@@ -44,10 +46,15 @@ command to use
 ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of default=noprint_wrappers=1 111.jpg
 
 ```
+tag -show_entries which values do we want to see 
+tag -of output formatting
 
+current command to crop all the image into the desired type for style gan 
+```bash
 
--show_entries which values do we want to see 
--of output formatting
+parallel --bar -j $(nproc) 'ffmpeg -loglevel error -i {} -vf "crop=420:420:0:80" -y cropped/{}' ::: *.jpg
+
+```
 
 
 

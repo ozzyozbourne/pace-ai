@@ -8,7 +8,6 @@
 []($section.id('about'))
 ## About this Devlog
 
-You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('rss')).
-
+For previous devlogs refer [devlog archive](/devlog/).
 
 ## [Using GNU Parallel]($section.id("2025-10-20T00:00:00"))

@@ -23,7 +23,7 @@ The basic structure of ffmpeg command is
 Example
 
 ```bash 
-ffmpeg -y \
+ffmpeg -loglevel error -y \
         -i "before/test.jpeg" \
         -vf "scale=512:512:force_original_aspect_ratio=decrease:flags=lanczos,pad=512:512:(ow-iw)/2:(oh-ih)/2:black,setsar=1:1" \
         -q:v 2 \
@@ -38,8 +38,8 @@ there is no separate flag for output in ffmpeg the output file is added last in 
 
 ## [FFMPEG commands explation]($section.id("2025-10-21T00:00:00"))
 
-- -y
-global flag for yes to overwrite
+- -y and -loglevel error
+global flag for yes to overwrite and only output the logs on error
 
 
 - -i

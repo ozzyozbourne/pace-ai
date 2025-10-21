@@ -1,6 +1,6 @@
 ---
 .title = "GNU Parallel",
-.date = @date("2025-10-18T00:00:00"),
+.date = @date("2025-10-21T00:00:00"),
 .author = "Osaid Khan",
 .layout = "devlog.shtml",
 .draft = false,
@@ -10,4 +10,17 @@
 
 For previous devlogs refer [devlog archive](/devlog/).
 
-## [Using GNU Parallel]($section.id("2025-10-20T00:00:00"))
+## [Using GNU Parallel]($section.id("2025-10-21T00:00:00"))
+- `parallel <command-with-placeholders> ::: <list of arguments>`
+
+this is the general pattern of the gpu parallel command 
+
+
+```bash
+command = 'ffmpeg -y -i before/{} \
+        -vf "scale=512:512:force_original_aspect_ratio=decrease:flags=lanczos,pad=512:512:(ow-iw)/2:(oh-ih)/2:black,setsar=1:1" \
+        -q:v 2 -update 1 after/{}'
+
+parallel --bar -j $(nproc) ${command} ::: *.jpg
+```
+

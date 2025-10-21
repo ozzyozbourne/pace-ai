@@ -39,3 +39,66 @@ there is no separate flag for output in ffmpeg the output file is added last in 
 
 
 ## [FFMPEG commands explation]($section.id("2025-10-21T00:00:00"))
+
+- -y
+global flag for yes to overwrite
+
+
+- -i
+name of the input image is enter followed by this flag 
+
+- -vf
+vedio filter chain flag and we define chain next, each filter is separated by a 
+commna here we have ***(scale=..., -> pad=..., -> setsar=...)***
+
+
+- scale=512:512:force_original_aspect_ratio=decrease:flags=lanczos 
+
+this is the first chain of transformation in the (vf), 
+here we have taking the scale and providing it 3 input,
+one is required, the remaining two are optional 
+so 512:512 define the dimenstion of the output image 
+
+- force_original_aspect_ratio=decrease 
+
+this defined that is if the image is greater than 512 * 512 scale it 
+down put preserve the ratio, for smaller image this would do anything,  
+hence padding is needed to fill the when the image is not exactly 512 * 512
+
+- flags=lanczos
+
+is this scaling algorthm that ffmpeg will use [wiki](https://en.wikipedia.org/wiki/Lanczos_algorithm)
+
+- pad=512:512:(ow-iw)/2:(oh-ih)/2:black
+
+this is next filter in the chain, this is where we define the padding, when the image is not 
+exactly 512 * 512 the format is ***pading=x_dim:y_dim:start_x_coord:start_y_coord:paddingcolor***
+so the dim of the output image is 512 * 512 
+and the starting coordinate in the x and y direction are 
+
+- ow - iw
+
+these are prefined variable in ffmpeg , ow is the output width, iw in the input width
+so to find the starting x coord we do (ow - iw) / 2
+same for the y dim, and black is the padding color 
+
+- setsar=1:1
+
+is the pixel ratio of width / height, so 1:1 means that pixel defined here are square 
+
+
+- -q:v 2
+
+-q means quality, here :v mean the vedio channel, since ffmpeg has many channel like :a (audio) etc
+
+- 1  
+
+means the compression quality from range of 1 to 31 with 1 means best quality, meaning low 
+compression but higher image size and 31 highly compression low quality we have choosing 2 here 
+ie reasonable quality and image size 
+
+- update 1 
+
+overwrite the to the same file if present it has for conformation but we have set -y as a global 
+flag to say yes to any such requests
+

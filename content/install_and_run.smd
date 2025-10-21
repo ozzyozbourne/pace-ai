@@ -10,9 +10,9 @@
 
 Requirements
 
-- ffmpeg
-- ffprobe
-- gnu parallel
+- [ffmpeg](/devlog/ffmpeg)
+- [ffprobe](/devlog/ffprobe)
+- [gnu parallel](/devlog/gnu_parallel)
 
 ## Run
 

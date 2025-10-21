@@ -13,3 +13,13 @@ You can [subscribe the latest devlog via RSS]($link.page('devlog').alternative('
 For previous devlogs refer [devlog archive](/devlog/).
 
 ## [Understanding FFMPEG]($section.id("2025-10-18T00:00:00"))
+
+The basic structure of ffmpeg command is
+- first provide the global flags
+- the provide the flags for input file 
+- then use -i flag and provide the input file 
+- then provide the output options 
+- then provide the output file 
+
+
+Example

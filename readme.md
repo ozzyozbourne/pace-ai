@@ -1,1 +1,7 @@
-# [Research Notes for PACE University AI Lab Fall 2025](https://ozzyozbourne.github.io/pace-ai/)
+# [Research Notes for PACE University AI Lab](https://ozzyozbourne.github.io/pace-ai/)
+
+[Powered by ZINE](https://zine-ssg.io)
+
+
+
+

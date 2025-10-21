@@ -23,3 +23,19 @@ The basic structure of ffmpeg command is
 
 
 Example
+
+```bash 
+ffmpeg -y \
+        -i "before/test.jpeg" \
+        -vf "scale=512:512:force_original_aspect_ratio=decrease:flags=lanczos,pad=512:512:(ow-iw)/2:(oh-ih)/2:black,setsar=1:1" \
+        -q:v 2 \
+        -update 1 \
+        "after/test.jpeg"
+
+```
+
+there is no separate flag for output in ffmpeg the output file is added last in the command 
+
+
+
+## [FFMPEG commands explation]($section.id("2025-10-21T00:00:00"))

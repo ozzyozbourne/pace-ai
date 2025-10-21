@@ -11,16 +11,32 @@
 For previous devlogs refer [devlog archive](/devlog/).
 
 ## [Using GNU Parallel]($section.id("2025-10-21T00:00:00"))
+
+A forall parallel looping construct for unix/linux systems, needed to be installed on mac via homebrew 
+
 - `parallel <command-with-placeholders> ::: <list of arguments>`
+to know more run man parallel
 
 this is the general pattern of the gpu parallel command 
 
 
 ```bash
-command = 'ffmpeg -y -i before/{} \
+command = 'ffmpeg -y -i {} \
         -vf "scale=512:512:force_original_aspect_ratio=decrease:flags=lanczos,pad=512:512:(ow-iw)/2:(oh-ih)/2:black,setsar=1:1" \
-        -q:v 2 -update 1 after/{}'
+        -q:v 2 -update 1 after/{/}'
 
-parallel --bar -j $(nproc) ${command} ::: *.jpg
+parallel --bar -j $(nproc) ${command} ::: *.jpeg
 ```
 
+- -bar 
+shows the progress bar 
+
+- -j 
+number of processors flag 
+
+- nproc 
+get the number of logical processor in the system
+
+
+note $() ->  for command substition and ${} -> for variable substition
+and {/} is to extract the file name from the path, is specific to gpu parallel 

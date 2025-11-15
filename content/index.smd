@@ -12,8 +12,7 @@ Upload the zip file containing the images to the google drive
 
 1. [Unzip to Google Drive](https://colab.research.google.com/drive/16MA1rnpI68qGQ4sxjjwH7ATVzfAP6hqo?usp=sharing)
 2. [Extract Classification catagories and Images](https://colab.research.google.com/drive/16MA1rnpI68qGQ4sxjjwH7ATVzfAP6hqo?usp=sharing)
-3. [Extract the Dresses using U2NET](https://colab.research.google.com/drive/1Vicx8g2hgyF7Lr1I-6luwy3dBelu8ElC?usp=sharing)
-4. [FFMPEG to fit resolution](https://colab.research.google.com/drive/1J2IX44MNzatyDqbI-e4jF3UXay8wl7S3?usp=sharing)
+3. [Extract Dresses and fix resolution](https://colab.research.google.com/drive/1Vicx8g2hgyF7Lr1I-6luwy3dBelu8ElC?usp=sharing)
 
 #### Pipeline Flow 
 
@@ -26,7 +25,11 @@ Upload the zip file containing the images to the google drive
 
 ## Style GAN
 
+1. [Style GAN 3](https://colab.research.google.com/drive/16TZ3V01IfyxyEZ2WztiYNDcN4P73r3Gz?usp=sharing)
+
 ## Stable diffusion
+
+1. [Stable diffusion](https://colab.research.google.com/drive/1dulMc1xK10kcZuYiAdjIpqfXhKFct7Ms?usp=sharing)
 
 
 

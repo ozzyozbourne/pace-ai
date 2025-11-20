@@ -24,15 +24,8 @@ Upload the zip file containing the images to the google drive
 6. Now, the data is ready to be run on styleGAN and stable diffusion
 
 ## Style GAN
-
 1. [Style GAN 3](https://colab.research.google.com/drive/16TZ3V01IfyxyEZ2WztiYNDcN4P73r3Gz?usp=sharing)
 
-## Stable diffusion
-
-1. [Stable diffusion](https://colab.research.google.com/drive/1dulMc1xK10kcZuYiAdjIpqfXhKFct7Ms?usp=sharing)
-
-
-
-
-
-
+## Stable diffusion 
+1. [Regular](https://colab.research.google.com/drive/1dulMc1xK10kcZuYiAdjIpqfXhKFct7Ms?usp=sharing)
+2. [Classifier](https://colab.research.google.com/drive/16_VRGHnc9QbuTJCShWzIC76fcRiTGkc9?usp=sharing)

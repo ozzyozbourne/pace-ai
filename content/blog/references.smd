@@ -1,0 +1,14 @@
+---
+.title = "References",
+.date = @date("2025-12-01T00:00:00"),
+.author = "Osaid Khan",
+.layout = "blog.shtml",
+.alternatives = [{ 
+    .name = "rss",
+    .layout = "blog.xml", 
+    .output = "index.xml",
+}],
+.draft = false,
+--- 
+
+1. [Guide to Stable Diffusion Prompt Weights](https://getimg.ai/guides/guide-to-stable-diffusion-prompt-weights)
